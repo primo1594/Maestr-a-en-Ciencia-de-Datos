@@ -70,7 +70,7 @@ Por favor escriba el anterior ejemplo y ejecutelo en el próximo espacio.
 _Ejercicio 1_
 ```{r example1}
 ## Escriba el ejemplo en el siguiente espacio (1 línea de código) ##
-
+rnorm(5) -> x
 # --------------------------- #
 x
 
@@ -86,17 +86,19 @@ Consulte la ayuda a través de R estudio para entender en qué consiste el paquete
 
 R/
 
-
-
-
+```{r Ejercicio2}
+?base
 ```
+
+
+```{r}
 ?rnorm
 
 ```
 
 Como hemos mencionado, la aplicación de la función rnorm nos dio un vector de cinco valores. Ahora si deseamos crear un vector con unos valores especificos y asignarlo a una variable, debemos proceder a digitar la función _c_ seguido de los valores que queremos tener dentro de _()_ y cada valor separado por _,_, por favor, digite el siguiente ejemplo en el espacio de código.  
 
-```
+```{R}
 vector <- c(1,4,5,6)
 
 ```
@@ -119,11 +121,11 @@ _Ejercicio 3_
 
 Escriba un vector de enteros con cuatro elementos
 
-```{R example2}
+```{r example2}
 # Escriba un vector de enteros con cuatro elementos (1 línea de código)
-
+#vector <- c(1:4)
 # --------------------------- #
-vector
+vector <- c(1:4)
 
 ```
 Hemos creado un vector de cuatro valores y lo hemos asignado a la variable _vector_.
@@ -219,7 +221,8 @@ _Ejercicio 4_
 
 ```{R example3}
 # Por favor escriba los dos vectores en el siguiente espacio (2 lineas de código)
-
+age <- c(1,3,5,2,11)
+weight <- c(4.4,5.3,7.2,5.2,8.5)
 
 # --------------------------- #
 print("Vector de Age")
@@ -259,10 +262,8 @@ Es probable que el paquete ya se encuentre instalado.
 _Ejercicio 5_
 ```{R example4}
 # Escriba el código que permita instalar y cargar los dos paquetes (cuatro líneas)
-
-
-
-
+install.packages("tidyverse")
+install.packages("nycflights13")
 # --------------------------- #
 ```
 
@@ -292,7 +293,8 @@ _Ejercicio 7_
 # Escriba el código que utilice la funcion seq y cree un vector de valores del 1 hasta el 10 (1 línea de código)
 
 # --------------------------- #
-vector
+?seq
+vector <- seq(1,10)
 
 ```
 
@@ -329,7 +331,7 @@ _Ejercicio 8_
 Cree un vector con nombre a y asignele los siguientes valores: k, j, h, a, c y m. 
 ```{R vector2}
 # 1 linea de código
-
+a<-c('k','j','h','a','c','m')
 # --------------------------- #
 ```
 
@@ -363,7 +365,8 @@ Observe como fue el proceso de ingreso de los datos, realice los cambios necesar
 _Ejercicio 9_
 ```{R matrizExample2}
 # 2 lineas de código
-
+y <- matrix(1:20, nrow=5, ncol=4, byrow = TRUE)
+y
 
 # -------------------------
 ```
@@ -383,14 +386,15 @@ La función _row.names()_ nos permite asignar nombres a las filas de la matriz, e
 ```{R matrizExample4}
 # 2 lineas de código
 names <- c("R1", "R2", "R3", "R4", "R5")
-row.names(x) <- names 
+row.names(x) <- names
+colnames(x) <- names[1:4]
 x
 # ----------
 ```
 Los nombres actúan como etiquetas, específicamente, es una opción para reemplazar los índices. 
 
 ```{R matrizExample5}
-x["R4",] 
+x["R4","R4"] 
 ```
 
 De la misma forma que en las filas, podemos encontrar la función para las columnas _colnames_.
@@ -432,7 +436,8 @@ Ahora digite la función str sobre el objeto flights.
 _Ejercicio 9_
 ```{R example6}
 # Escriba el código que utilice la funcion str en el objeto flights (1 línea de código)
-
+?str
+str(nycflights13::flights)
 # --------------------------- #
 ```
 
@@ -578,7 +583,7 @@ Escriba y ejecute el código necesario para crear el factor ordinal ```PartientSt
 
 ```{R ejercicioFactor1}
 # 1 linea de código
-
+PatientStatus <- factor(c("Poor","Improved","Excellent"), levels = c("Poor","Improved","Excellent"))
 # -------------------
 PatientStatus
 ```
@@ -588,9 +593,11 @@ _Ejercicio 11_
 Si x <- c(1, 2, 3, 3, 5, 3, 2, 4, NA), ¿cuáles son los niveles de factor(x)?
 ```{R ejercicioFactor2}
 # 1 linea de código
-
+x <- c(1, 2, 3, 3, 5, 3, 2, 4, NA)
+xFactor <- factor(x)
 # -------------------
 x
+xFactor
 ```
 
 R/
@@ -603,8 +610,9 @@ R/
 
 ```{R ejercicioFactor3}
 # 2 lineas de código
-
-
+x <- c(11, 22, 47, 47, 11, 47, 11)
+xFactor <- factor(x, levels=c(11,22,47), ordered=TRUE)
+xFactor
 # -------------------
 ```
 _Ejercicio 13_
@@ -619,8 +627,8 @@ R/
 
 ```{R ejercicioFactor4}
 # 2 lineas de código
-
-
+z <-c("p", "a" , "g", "t", "b")
+z[3] <-"b"
 # -------------------
 z
 ```
@@ -639,8 +647,8 @@ Opcionalmente, podemos darles un nombre a los objetos de la lista
 ```{R listExample1}
 g <- "My first list" 
 h <- c(25, 26, 18, 39)
-j <- matrix(1:10, nrow = 5)
-k <- c("one", "two", "trhee")
+j <- matrix(1:10, nrow = 5, byrow = TRUE)
+k <- c("one", "two", "three")
 mylist <- list(title=g, ages=h, j, k) # create a list
 mylist
 
@@ -648,7 +656,7 @@ mylist
 Podemos acceder a los elementos de la lista de la siguiente forma.
 ```{R listExample2}
 mylist[[2]]
-mylist[[3]][1,] #retorna la matric e imprime la primera fila
+mylist[[3]][1,] #retorna la matriz e imprime la primera fila
 mylist[["ages"]]
 ```
 
@@ -685,7 +693,7 @@ _Ejercicio 14_
 
 ```{R example1}
 # Escriba en el siguiente espacio el código que permita cargar el archivo parks.csv (1 línea de código)
-
+df <- read.csv2(file.choose())
 # --------------------------- #
 ```
 ## Ingresando datos desde el teclado 
