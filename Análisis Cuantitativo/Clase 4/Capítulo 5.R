@@ -1,0 +1,33 @@
+data<-read.csv(file.choose())
+head(data,3)
+class(data)
+str(data)
+attach(data)
+plot(log_PIB_USA,log_PIB_Col)
+D<-year>=1991
+data$D<-as.numeric(D)
+head(data,3)
+tail(data)
+data[29:36,]
+reg1<-lm(log_PIB_Col~D+log_PIB_USA+D*log_PIB_USA,data = data)
+summary(reg1)
+reg2<-lm(log_PIB_Col~log_PIB_USA,data=data)
+anova(reg2,reg1)
+D2<-year>=1991&year<=2000
+head(D2)
+data$D2<-as.numeric(D2)
+head(data)
+show(data)
+reg3<-lm(log_PIB_Col~D2+log_PIB_USA+D2*log_PIB_USA,data = data)
+anova(reg2,reg3)
+summary(reg3)
+########################################
+install.packages("dummies")
+library(dummies)
+letras<-c("a","a","b","c","d","e","f","g","h","b","b")
+letras
+class(letras)
+dummy(letras)
+letras<-as.factor(letras)
+letras
+dummy(letras,sep=":")
