@@ -1,0 +1,343 @@
+---
+title: "House_prices"
+author: "Christian Urcuqui"
+date: "4 de marzo de 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# configuremos nuestro entorno de trabajo
+knitr::opts_knit$set(root.dir = "D:/Usuarios/rhaps/Documents/Challenges/kaggle/house_prices")
+```
+
+# House Prices: Advanced Regression Techniques 
+
+Este notebook busca aplicar las técnicas de exploración de datos para el entrenamiento de modelos predictivos para el precio de las casas de la competencia "House Prices"" de Kaggle.
+```
+https://www.kaggle.com/c/house-prices-advanced-regression-technique
+```
+
+## paquetes
+
+```{r paquetes}
+library(dplyr)
+library(ggplot2)
+library(psych)
+library(stringr)
+library(lubridate)
+```
+
+
+En primer lugar, configuraremos nuestro entorno de trabajo y las librerías que utilizaremos
+```{r configuraciones}
+# Configuremos nuestro directorio de trabajo
+#setwd(choose.dir())
+#setwd("D:/Usuarios/rhaps/OneDrive/Clases/2019-1/Analisis exploratorio/clase3")
+# Observe primero el formato de los csv  
+# carguemos los datos de entrenamiento y testeo con los factores como caracteres
+#train <-read.csv(file.choose(), stringsAsFactors=FALSE)
+train <-read.csv2("train_clase.csv", stringsAsFactors=FALSE)
+test <-read.csv(file.choose(), stringsAsFactors=FALSE) 
+```
+
+
+
+## Dimensiones de la base de datos
+
+Aplique las funciones head() y tail() sobre el conjunto de train
+
+Diapositiva 17
+```{r dimensiones}
+# las primeras y últimas filas de la bd
+head(train)
+tail(train)
+```
+
+## Cambiar los nombres de variables 
+
+diapositiva 18
+```{r nombresC}
+train2 <- train
+colnames(train2)<- tolower(colnames(train2))
+```
+
+
+## Tratamiento de fechas
+
+dipositiva 22
+```{r fechasTr}
+train2$yearbuilt <- as.Date(paste0(train2$yearbuilt, '-01-01'))
+train2$yearremodadd <- as.Date(paste0(train2$yearremodadd, '-01-01'))
+# diapositiva 23
+train2$datesold <- as.POSIXct(paste0(train2$yrsold,"-", train2$mosold, "-01"), format="%Y-%m-%d")
+```
+
+## Observaciones duplicadas
+
+diapositiva 26
+```{r duplicadas}
+# la variable más sensible a tener datos duplicados es el identificador
+train2[duplicated(train2$id),]
+# eliminemos los registros duplicados 
+train2 <- train2[!duplicated(train2),]
+```
+
+## Errores de digitación
+
+Diapositiva 30
+```{r digitacion}
+# exploremos los errores en las variables street y lotconfig
+table(factor(train2$street)) # dato mal digitado - v versus b
+table(factor(train2$lotconfig)) # dato mal digitado - minuscula
+levels(factor(train2$lotconfig))
+
+# corrección de los problemas
+train2[train2$street=="Pabe",]$street <- "Pave"
+train2[train2$lotconfig=="Fr3",]$lotconfig <- "FR3"
+train2$street <- str_trim(train2$street) # removemos el espacio en blanco 
+table(factor(train2$street)) # ver corrección 
+table(factor(train2$lotconfig)) # ver corrección
+```
+
+
+## No correspondencia entre el formato de la variable y su tipo
+
+Carga por defecto
+
+Vamos a transformar algunas de las variables a categóricas, es decir, a nominales, ordinales y binarias
+
+diapositiva 34
+```{r tipos}
+# veamos los tipos de variables que existen
+str(train2)
+```
+
+_Transformando los tipos de las variables_
+
+Debe tener cuidado con los niveles de los factores, cerciórese con el diccionario de variables
+
+Diapositiva 36
+```{r transformacionV}
+train2$mssubclass <- factor(train2$mssubclas)
+train2$mszoning <- factor(train2$mszoning)
+train2$street <-factor(train2$street)
+train2$alley <-factor(train2$alley, levels=c("NA","Pave", "Grvl"))
+train2$lotshape <- factor(train2$lotshape, levels=c("IR3","IR2","IR1","Reg"), ordered=TRUE)
+train2$landcontour <- factor(train2$landcontour)
+train2$utilities <- factor(train2$utilities)
+train2$lotconfig <- factor(train2$lotconfig)
+train2$landslope <- factor(train2$landslope)
+train2$neighborhood <-factor(train2$neighborhood)
+train2$condition1 <- factor(train2$condition1)
+train2$condition2 <- factor(train2$condition2)
+train2$bldgtype <-factor(train2$bldgtype)
+train2$housestyle <- factor(train$HouseStyle)
+train2$overallqual <- factor(train2$overallqual, levels=c(1,2,3,4,5,6,7,8,9,10), ordered=TRUE)
+train2$overallcond <- factor(train2$overallcond, levels=c(1,2,3,4,5,6,7,8,9,10), ordered=TRUE)
+#train2$yearbuilt <- as.character(train2$yearbuilt)
+#train2$yearremodadd <- as.character(train2$yearremodadd)
+train2$yrsold <- as.character(train2$yrsold)
+train2$mosold <- as.character(train2$mosold)
+train2$roofstyle <- factor(train2$roofstyle)
+train2$roofmatl <- factor(train2$roofmatl)
+train2$exterior1st <- factor(train2$exterior1st)
+train2$exterior2nd <- factor(train2$exterior2nd)
+train2$masvnrtype <- factor(train2$masvnrtype)
+train2$exterqual <- factor(train2$exterqual, levels=c("Po","Fa","TA","Gd", "Ex"), ordered=TRUE)
+train2$extercond <- factor(train2$extercond, levels=c("Po","Fa","TA","Gd", "Ex"), ordered=TRUE)
+train2$foundation <- factor(train2$foundation)
+train2$bsmtqual <- factor(train2$extercond, levels=c("NA", "Po","Fa","TA","Gd", "Ex"), ordered=TRUE)
+train2$bsmtcond <- factor(train2$bsmtcond, levels=c("NA", "Po","Fa","TA","Gd", "Ex"), ordered=TRUE)
+train2$bsmtexposure <- factor(train2$bsmtexposure, levels=c("NA", "No","Mn","Av","Gd"), ordered=TRUE)
+train2$bsmtfintype1 <- factor(train2$bsmtfintype1, levels=c("NA","Unf","LwQ","Rec", "BLQ", "ALQ", "GLQ"), ordered=TRUE)
+train2$bsmtfintype2 <- factor(train2$bsmtfintype2, levels=c("NA","Unf","LwQ","Rec", "BLQ", "ALQ", "GLQ"), ordered=TRUE)
+train2$heating <- factor(train2$heating)
+train2$heatingqc <- factor(train2$heatingqc, levels=c("Po","Fa","TA","Gd", "Ex"), ordered=TRUE)
+train2$centralair <- factor(train2$centralair, levels=c("N", "Y"))
+train2$electrical <- factor(train2$electrical, levels=c("Mix", "FuseP", "FuseF", "FuseA", "SBrkr"))
+train2$kitchenqual <- factor(train2$kitchenqual, levels=c("Po","Fa","TA","Gd", "Ex"), ordered=TRUE)
+train2$functional <- factor(train2$functional)
+train2$fireplacequ <- factor(train2$fireplacequ, levels=c("NA","Po","Fa","TA","Gd", "Ex"), ordered=TRUE)
+train2$garagetype <- factor(train2$garagetype, levels=c("NA", "Detchd", "CarPort", "BuiltIn", "Basment", "Attchd", "2Types"))
+train2$garagefinish <- factor(train2$garagefinish, levels=c("NA", "Unf", "RFn", "Fin"))
+train2$garagequal <- factor(train2$fireplacequ, levels=c("NA","Po","Fa","TA","Gd", "Ex"), ordered=TRUE)
+train2$garagecond <- factor(train2$garagecond, levels=c("NA","Po","Fa","TA","Gd", "Ex"), ordered=TRUE)
+train2$paveddrive <- factor(train2$paveddrive)
+train2$poolqc <- factor(train2$poolqc, levels=c("NA","Po","Fa","TA","Gd", "Ex"), ordered=TRUE)
+train2$fence <- factor(train2$fence, levels=c("NA","MnWw","GdWo","MnPrv","GdPrv"), ordered=TRUE, exclude = "")
+train2$miscfeature <- factor(train2$miscfeature, levels=c("NA", "TenC", "Shed", "Othr", "Gar2", "Elev"))
+train2$saletype <- factor(train2$saletype)
+train2$salecondition <- factor(train2$salecondition)
+train2$garageyrblt <- as.character(train2$garageyrblt)
+
+```
+
+## Trabajando con missing values
+
+Diapositiva 39
+```{r missing}
+# ¿cuantos missing values existen?
+(table(is.na(train2)))
+summary(train2)
+# podemos encontrar las siguientes variables con NAs: lotfrontage, alley, masvnrtype, masvnrarea, bsmtcond, bsmtexposure, bsmtfintype1, bsmtfintype2, electrical, fireplacequ, garagetype, garagefinish, garagecond, poolqc, fence, miscfeature
+```
+
+Del anterior resumen podemos listar la cantidad de variables que incluyen valores perdidos, hay que anotar que algunas de estas son categóricas e incluyen en sus valores este tipo de dato, es por ello que vamos a listar todas las variables que incluyen valores perdidos y a resaltar aquellas que las incluyen como una categoría
+
++ lotfrontage, es una variable cuantitativa (por analizar)
++ alley, es una variable categorica y _la incluye como parte de sus datos_
++ masvnrtype, es una variable categorica y no la incluye (por analizar)
++ masvnrarea,  es una variable cuantitativa (por analizar)
++ bsmtcond, es una variable categorica y _la incluye como parte de sus datos_
++ bsmtexposure, es una variable categorica y _la incluye como parte de sus datos_
++ bsmtfintype1,  es una variable categorica y _la incluye como parte de sus datos_
++ bsmtfintype2,  es una variable categorica y _la incluye como parte de sus datos_
++ electrical, es una variable categorica y no la incluye (por analizar)
++ fireplacequ, es una variable categorica y _la incluye como parte de sus datos_
++ garagetype, es una variable categorica y _la incluye como parte de sus datos_
++ garagefinish, es una variable categorica y _la incluye como parte de sus datos_
++ garagecond, es una variable categorica y _la incluye como parte de sus datos_
++ poolqc, es una variable categorica y _la incluye como parte de sus datos_
++ fence, es una variable categorica y _la incluye como parte de sus datos_
++ miscfeature, es una variable categorica y _la incluye como parte de sus datos_
+
+Una técnica para el tratamiento de valores perdidos es eliminar ya sea la variable (columna) o el registro completo (fila).
+
+Vamos a ver la posibilidad de aplicar la primera técnica, para ello calculemos la cantidad de valores faltantes para las variables etiquetadas por analizar.
+
+Diapositiva 50
+```{r missing2}
+# para lotfrontage
+print("-----lotfrontage-----")
+(table(is.na(train2$lotfrontage)) / NROW(train2$lotfrontage)) * 100
+print(" ----masvnrarea-----  ")
+(table(is.na(train2$masvnrarea)) / NROW(train2$masvnrarea)) * 100
+print(" ----electrical-----  ")
+(table(is.na(train2$electrical)) / NROW(train2$electrical)) * 100
+print(" ----garageyrblt ---")
+(table(is.na(train2$garageyrblt)) / NROW(train2$garageyrblt)) * 100
+
+# Diapositiva 51
+# cantidad de registros sin NAs en las cuatro variables
+train2 %>% 
+  filter(!is.na(lotfrontage)) %>%
+  filter(!is.na(masvnrarea)) %>%
+  filter(!is.na(electrical)) %>%
+  filter(!is.na(garageyrblt)) %>%
+  str()
+# grafico de densidad de dos variables
+ggplot(train2) +
+  geom_density(mapping=aes(train2$lotfrontage)) + 
+  xlab("lotfrontage")
+
+ggplot(train2) +
+  geom_density(mapping=aes(train2$masvnrarea)) + 
+  xlab("masvnrarea")
+
+# diapositiva 53
+print("estadisticos descriptivos  - lotfrontage")
+describe(train2[!is.na(train2$lotfrontage),]$lotfrontage)
+print("estadisticos descriptivos  - masvnrarea")
+describe(train2[!is.na(train2$masvnrarea),]$masvnrarea)
+
+# diapositiva 41
+# toma de decisiones de las variables
+
+
+# diapositiva 55
+# conservamos los otros dos conjuntos de datos
+backup_lotfron <- filter(train2, is.na(lotfrontage))
+backup_garageyr <- filter(train2, is.na(garageyrblt))
+
+# borramos los datos 
+train2 <- train2 %>% 
+  filter(!is.na(lotfrontage)) %>%
+  filter(!is.na(masvnrarea)) %>%
+  filter(!is.na(electrical)) %>%
+  filter(!is.na(garageyrblt))
+
+```
+
+Diapositiva 56
+```{r missingfactores}
+
+
+print("variable fence")
+summary(train2$fence)
+print("variable poolqc")
+summary(train2$poolqc)
+
+train2[is.na(train2$poolqc),]$poolqc <- "NA"
+levels(train2$poolqc)
+train2[is.na(train2$alley),]$alley <- "NA"
+#train2[is.na(train2$bsmtqual),]$bsmtqual <- "NA"
+train2[is.na(train2$bsmtcond),]$bsmtcond <- "NA"
+train2[is.na(train2$bsmtexposure),]$bsmtexposure <- "NA"
+train2[is.na(train2$bsmtfintype1),]$bsmtfintype1 <- "NA"
+train2[is.na(train2$bsmtfintype2),]$bsmtfintype2 <- "NA"
+train2[is.na(train2$garagetype),]$garagetype <- "NA"
+#train2[is.na(train2$garagefinish),]$garagefinish <- "NA"
+train2[is.na(train2$garagequal),]$garagequal <- "NA"
+#train2[is.na(train2$garagecond),]$garagecond <- "NA"
+train2[is.na(train2$fence),]$fence <- "NA"
+train2[is.na(train2$miscfeature),]$miscfeature <- "NA"
+train2[is.na(train2$fireplacequ),]$fireplacequ <- "NA"
+
+
+
+print("variable fence")
+summary(train2$fence)
+print("variable poolqc")
+summary(train2$poolqc)
+
+```
+
+## Valores inconsistentes 
+
+Evaluemos las variables de garage
+```{r inconsistentes}
+# forma de encontrarlo - diapositiva 61
+table(train2$garagetype, train2$garagefinish, dnn=c("Tipo de garaje", "finalización del garaje"))
+# borrar el valor inconsistente 
+summary(train2$garagetype)
+train2[train2$garagetype == "NA",] <- NA
+train2<- train2[!is.na(train2$garagetype),]
+table(train2$garagetype, train2$garagefinish, dnn=c("Tipo de garaje", "finalización del garaje"))
+```
+
+## Valores fuera del rango - creando nuevas variables 
+
+diapositiva 66
+
+variable yeartbuilt
+```{r invalido}
+# encontrarlo 
+summary(as.character(train2$yearbuilt)) # problema al transformar los datos a caracteres
+summary(train2$yearbuilt) # encontramos una mala 
+train2[year(train2$yearbuilt)>2019, ] <- NA # borramos el registro
+train2<- train2[!is.na(train2$yearbuilt),]
+summary(train2$yearbuilt) # verificamos el proceso
+```
+
+## Creación de nuevas variables
+
+diapositiva 68
+
+```{r fuerarango}
+ggplot(train2) + 
+  geom_density(mapping = aes(grlivarea)) +
+  xlab("living area square feet")
+
+#ggplot(train2) + 
+#  geom_density(mapping = aes(log10(grlivarea))) +
+#  xlab("living area square feet")
+
+ggplot(train2) + 
+  geom_boxplot(mapping = aes(y=grlivarea, x=" ")) +
+  xlab("living area square feet")
+
+train2$grlivarea_cat <- ifelse(train2$grlivarea <= 3000, "menor","mayor")
+table(train2$grlivarea_cat)
+#ok<- filter(train2, grlivarea<= 3000)$grlivarea
+
+```
