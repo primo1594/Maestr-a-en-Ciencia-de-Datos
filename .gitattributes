@@ -18,3 +18,5 @@
 *.RTF	 diff=astextplain
 *.txt  diff=astextplain
 *.csv  diff=astextplain
+*.xls  diff=astextplain
+*.tsv  diff=astextplain
