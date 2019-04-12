@@ -1,0 +1,18 @@
+data<-read.csv("Hurto_a_personas_2017.csv",encoding="UTF-8")
+View(data)
+data2<-read.csv("Homicidios_2017.csv",encoding="UTF-8")
+View(data2)
+str(data2)
+colnames(data2)<-tolower(colnames(data2))
+colnames(data2) <- gsub("\\.", "", colnames(data2))
+str(data2)
+colnames(data2)<-iconv(colnames(data2),to="ASCII//TRANSLIT")
+str(data2)
+data2<-data2[,-which(colnames(data2)=='codigodane')]
+str(data2)
+data2$fecha <- as.Date(data2$fecha,"%d/%m/%Y")
+str(data2)
+table(data2$departamento)
+valle.data<-data2[which(data2$departamento=="VALLE"),]
+summary(data2)
+summary(valle.data)
