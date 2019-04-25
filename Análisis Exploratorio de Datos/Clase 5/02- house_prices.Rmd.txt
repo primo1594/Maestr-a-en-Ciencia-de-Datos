@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>elearning Icesi: Entrar al sitio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Moodle Theme by 3rd Wave Media | elearning.3rdwavemedia.com" />
+    
+    <link rel="shortcut icon" href="https://www.icesi.edu.co/moodle/theme/image.php?theme=impression&amp;component=theme&amp;rev=1554735053&amp;image=favicon" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic,500italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('https://www.icesi.edu.co/moodle/theme/impression/fonts/glyphicons-halflings-regular.eot');
+  src: url('https://www.icesi.edu.co/moodle/theme/impression/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('https://www.icesi.edu.co/moodle/theme/impression/fonts/glyphicons-halflings-regular.woff') format('woff'), url('https://www.icesi.edu.co/moodle/theme/impression/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('https://www.icesi.edu.co/moodle/theme/impression/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+</style>    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, elearning Icesi: Entrar al sitio" />
+<link rel="stylesheet" type="text/css" href="https://www.icesi.edu.co/moodle/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://www.icesi.edu.co/moodle/theme/styles.php?theme=impression&amp;rev=1554735053_1&amp;type=all" />
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/www.icesi.edu.co\/moodle","sesskey":"UufEX1xsP9","themerev":"1554735053","slasharguments":0,"theme":"impression","iconsystemmodule":"core\/icon_system_standard","jsrev":"1553099973","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Bogot\u00e1","contextid":1};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/www.icesi.edu.co\/moodle\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/www.icesi.edu.co\/moodle\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/www.icesi.edu.co\/moodle\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/www.icesi.edu.co\/moodle\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/www.icesi.edu.co\/moodle\/theme\/yui_combo.php?m\/1553099973\/","combine":true,"comboBase":"https:\/\/www.icesi.edu.co\/moodle\/theme\/yui_combo.php?","ext":false,"root":"m\/1553099973\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-checknet":{"requires":["base-base","moodle-core-notification-alert","io-base"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dock":{"requires":["base","node","event-custom","event-mouseenter","event-resize","escape","moodle-core-dock-loader","moodle-core-event"]},"moodle-core-dock-loader":{"requires":["escape"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-modchooser":{"requires":["moodle-core-chooserdialogue","moodle-course-coursebase"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-showadvanced":{"requires":["node","base","selector-css3"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-qbankmanager":{"requires":["node","selector-css3"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_xp-form":{"requires":["base","node","event","handlebars","moodle-core_availability-form"]},"moodle-qtype_musictheory-musictheoryqtype":{"requires":["base","node","datatype","node-event-simulate"]},"moodle-qtype_musictheory-musictheoryui":{"requires":["base","node","datatype","panel","dd-plugin"]},"moodle-qtype_musictheory-musictheorykeyboardui":{"requires":["base","node","datatype"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-imports":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-modform":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-broker":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_bigbluebuttonbn-recordings":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_bigbluebuttonbn-rooms":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_forum-subscriptiontoggle":{"requires":["base-base","io-base"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-block_xp-rulepicker"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_corrections-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_poodll-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wiris-button":{"requires":["moodle-editor_atto-plugin","get"]}}},"gallery":{"name":"gallery","base":"https:\/\/www.icesi.edu.co\/moodle\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/www.icesi.edu.co\/moodle\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1553099973\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/www.icesi.edu.co\/moodle\/lib\/javascript.php?rev=1553099973&jsfile=%2Frepository%2Ffilepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/www.icesi.edu.co\/moodle\/lib\/javascript.php?rev=1553099973&jsfile=%2Fcomment%2Fcomment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.2\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<meta name="google-site-verification" content="k5pntwDK-UHb0zlCrQ7EdcLxOd38r0nl4met3z-S9yU" /><meta name="robots" content="noindex" />        
+        <!-- Start Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3433898-62', 'auto');
+  ga('send', 'pageview');
+
+</script>    <!-- End Google Analytics -->
+        
+</head>
+
+<body  id="page-login-index" class="format-site  path-login chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam www-icesi-edu-co--moodle pagelayout-login course-1 context-1 notloggedin content-only layout-option-langmenu">
+<div class="skiplinks">
+    <a href="#maincontent" class="skip">Saltar a contenido principal</a>
+</div><script type="text/javascript" src="https://www.icesi.edu.co/moodle/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script type="text/javascript" src="https://www.icesi.edu.co/moodle/lib/jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://www.icesi.edu.co/moodle/theme/impression/jquery/bootstrap_plugins/bootstrap.js"></script>
+<script type="text/javascript" src="https://www.icesi.edu.co/moodle/theme/impression/jquery/back-to-top.js"></script>
+<script type="text/javascript" src="https://www.icesi.edu.co/moodle/theme/impression/jquery/bootstrap-hover-dropdown.js"></script>
+<script type="text/javascript" src="https://www.icesi.edu.co/moodle/theme/impression/jquery/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="https://www.icesi.edu.co/moodle/theme/impression/jquery/jquery.matchHeight-min.js"></script>
+<script type="text/javascript" src="https://www.icesi.edu.co/moodle/theme/impression/jquery/jquery.placeholder.js"></script>
+<script type="text/javascript" src="https://www.icesi.edu.co/moodle/theme/impression/jquery/jquery.fitvids.js"></script>
+<script type="text/javascript" src="https://www.icesi.edu.co/moodle/lib/javascript.php?rev=1553099973&amp;jsfile=%2Flib%2Fjavascript-static.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2"></script>
+
+
+
+    <!-- ******HEADER****** -->
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="container-fluid">
+
+                <!-- Cristian : Logo -->
+                <div id="LogoBanner">
+                    <img src="https://www.icesi.edu.co/moodle/theme/impression/pix/logo.svg" alt="Logo" width="120" height="25" class="img-responsive atto_image_button_text-bottom">
+                </div>
+                <!-- Cristian : Fin -->
+
+                                
+                <div class="logininfo-container">
+                                        <div class="usermenu"><span class="login">Usted no se ha identificado.</span></div>                </div>
+                <!--//logininfo-container-->
+
+                
+                
+            </div>
+            <!--//container-fluid-->
+        </div>
+        <!--//topbar-->
+        <div class="branding">
+            <div class="container-fluid">
+                <h1 class="logo pull-left">
+                    <a href="https://www.icesi.edu.co/moodle"><img id="logo" class="img-responsive" src="//www.icesi.edu.co/moodle/pluginfile.php?file=%2F1%2Ftheme_impression%2Flogo%2F1554735053%2FLogo_sitio%20%281%29.png" alt="moodle" /></a>
+                </h1>
+                <!--//logo-->
+                <nav id="main-nav" class="main-nav navbar-right" role="navigation">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!--//nav-toggle-->
+                    </div>
+                    <!--//navbar-header-->
+                    <div class="navbar-collapse collapse" id="navbar-collapse">
+                                            </div>
+                    <!--//navabr-collapse-->
+                </nav>
+                <!--//main-nav-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//site-header-->
+  
+
+
+    <div id="page" class="container">
+        <div id="page-content" class="row">
+            <section id="region-main" class="col-md-12">
+                
+                	<div id="page-navbar" class="clearfix">
+                		<nav class="breadcrumb-button"></nav>
+                    	<div class="breadcrumb-nav"><span class="accesshide" id="navbar-label">Ruta a la página</span><nav aria-labelledby="navbar-label"><ul class="breadcrumb"><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://www.icesi.edu.co/moodle/"><span itemprop="title">Página Principal</span></a></span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25BA;</span> </span></li><li><span tabindex="0">Entrar al sitio</span></li></ul></nav></div>
+                	</div>                	
+                    <span class="notifications" id="user-notifications"></span><div role="main"><span id="maincontent"></span><div class="loginbox clearfix onecolumn">
+
+    <div class="loginpanel">
+
+        <h2>Acceder</h2>
+
+        <div class="subcontent loginsub">
+                <div class="loginerrors" role="alert">
+                    <a href="#" id="loginerrormessage" class="accesshide">Su sesión ha excedido el tiempo límite. Por favor, ingrese de nuevo.</a>
+                    <span class="error"><img class="icon icon icon-pre" alt="Error" src="https://www.icesi.edu.co/moodle/theme/image.php?theme=impression&amp;component=core&amp;rev=1554735053&amp;image=i%2Fwarning" />Su sesión ha excedido el tiempo límite. Por favor, ingrese de nuevo.</span>
+                </div>
+            <form action="https://www.icesi.edu.co/moodle/login/index.php" method="post" id="login">
+                <div class="loginform">
+                    <div class="form-label">
+                        <label for="username">
+                                Nombre de usuario
+                        </label>
+                    </div>
+                    <div class="form-input">
+                        <input type="text" name="username" id="username" size="15" value="1143855555">
+                    </div>
+                    <div class="clearer"><!-- --></div>
+                    <div class="form-label">
+                        <label for="password">Contraseña</label>
+                    </div>
+                    <div class="form-input">
+                        <input type="password" name="password" id="password" size="15" value="">
+                    </div>
+                </div>
+
+                <div class="clearer"><!-- --></div>
+                    <div class="rememberpass">
+                        <input type="checkbox" name="rememberusername" id="rememberusername" value="1" checked="checked" />
+                        <label for="rememberusername">Recordar nombre de usuario</label>
+                    </div>
+                <div class="clearer"><!-- --></div>
+                <input id="anchor" type="hidden" name="anchor" value="" />
+                <script>document.getElementById('anchor').value = location.hash;</script>
+                <input type="hidden" name="logintoken" value="8RfVoxlZn310vlB0PC8bvGg3djCiW5Oa">
+                <input type="submit" id="loginbtn" value="Acceder" />
+                <div class="forgetpass">
+                    <a href="https://www.icesi.edu.co/moodle/login/forgot_password.php">¿Olvidó su nombre de usuario o contraseña?</a>
+                </div>
+            </form>
+
+            <div class="desc">
+                Las 'Cookies' deben estar habilitadas en su navegador
+                <span class="helptooltip">
+    <a href="https://www.icesi.edu.co/moodle/help.php?component=moodle&amp;identifier=cookiesenabled&amp;lang=es" title="Ayuda con Las &#039;Cookies&#039; deben estar habilitadas en su navegador" aria-haspopup="true" target="_blank"><img class="icon iconhelp" alt="Ayuda con Las &#039;Cookies&#039; deben estar habilitadas en su navegador" title="Ayuda con Las &#039;Cookies&#039; deben estar habilitadas en su navegador" src="https://www.icesi.edu.co/moodle/theme/image.php?theme=impression&amp;component=core&amp;rev=1554735053&amp;image=help" />
+</a>
+</span>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="signuppanel">
+
+    </div>
+</div></div>               
+            </section>
+        </div><!---//page-content-->    	
+    </div><!--//#page-->
+
+	    
+    <footer class="site-footer">
+        
+        <div class="footer-content">
+            <div class="container">
+                
+                                <div class="row"> 
+                                       
+                    <div class="footer-col col-md-5 col-sm-7 col-sm-12 about">
+                        <div class="footer-col-inner">
+                         <h3 class="title">SYRI E-learning</h3>
+<p style="color:rgba(0,0,0,.5)">La Oficina de SYRI E-Learning, tiene como objetivo investigar, proponer e implementar herramientas tecnológicas que facilitan la administración de los procesos de enseñanza – aprendizaje.&nbsp;</p>
+<p><a href="http://www.icesi.edu.co/blogs/elearning/archivos/1" target="_blank">Más información </a><a class="more" href="http://www.icesi.edu.co/resena_historica.php" target="_blank"><i class="fa fa-long-arrow-right"></i></a></p>     
+                        </div><!--//footer-col-inner-->
+                    </div><!--//foooter-col-->  
+                         
+                                
+                    <div class="footer-col col-md-3 col-sm-4 col-md-offset-1 links">
+                        <div class="footer-col-inner">
+                            <h3 class="title">Enlaces de interés</h3>
+<ul class="list-unstyled">
+    <li><a href="http://www.icesi.edu.co/" target="_blank" style="color:rgba(0,0,0,.5)"><i class="fa fa-caret-right"></i> Universidad Icesi</a></li>
+    <li><a href="https://www.icesi.edu.co/aviso-de-privacidad" target="_blank" style="color:rgba(0,0,0,.5)"><i class="fa fa-caret-right"></i> Aviso de privacidad</a></li>
+    <li><a href="https://www.icesi.edu.co/politica-de-tratamiento-de-datos-personales" target="_blank" style="color:rgba(0,0,0,.5)"><i class="fa fa-caret-right"></i> Política de tratamiento de datos</a></li>
+</ul> 
+                        </div><!--//footer-col-inner-->            
+                    </div><!--//foooter-col-->  
+                      
+                     
+                    <div class="footer-col col-md-3 col-sm-12 contact">
+                        <div class="footer-col-inner">
+                            <h3 class="title">Contacto</h3>
+<div class="row">
+    <p class="tel col-md-12 col-sm-4" style="color:rgba(0,0,0,.5)"><i class="fa fa-graduation-cap"></i> Universidad Icesi - SYRI E-learning</p>
+    <p class="tel col-md-12 col-sm-4" style="color:rgba(0,0,0,.5)"><i class="fa fa-phone"></i> +57 (2) 555 2334 Ext. 4188</p>
+    <p class="tel col-md-12 col-sm-4" style="color:rgba(0,0,0,.5)"><i class="fa fa-envelope"></i>&nbsp;e-learning@listas.icesi.edu.co&nbsp;</p>
+    <p class="adr clearfix col-md-12 col-sm-4" style="color:rgba(0,0,0,.5)">
+        <i class="fa fa-map-marker pull-left"></i>        
+        <span class="adr-group pull-left">       
+            <span class="street-address">Calle 18 No. 122-135 Pance</span><br>
+            <span class="region">Cali - Colombia</span><br>
+        </span>
+    </p>  
+</div> 
+                        </div><!--//footer-col-inner-->
+                    </div><!--//foooter-col-->
+                                    </div><!--//row-->
+                 
+                
+                
+        <div class="footer-social text-center">
+                <h3 class="title">Conéctate con nosotros</h3>
+                    <ul class="social-icons list-inline">
+                                <li><a href="http://www.twitter.com/BiblioIcesi"  target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="https://www.facebook.com/Serv.Apoyo.Icesi"  target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="https://plus.google.com/103357362094656378486"  target="_blank"><i class="fa fa-google-plus"></i></a></li> 
+                                                                                <li><a href="https://www.youtube.com/user/universidadicesi"  target="_blank"><i class="fa fa-youtube"></i></a></li>
+                                                                                                 
+            </ul><!--//social-icons--> 
+    </div><!--//footer-social-->
+    
+	
+
+                
+                <p class="helplink"></p>
+                
+                <div class="text-center">
+                    <div class="logininfo">Usted no se ha identificado.</div>                    <div class="tool_dataprivacy"><a href="https://www.icesi.edu.co/moodle/admin/tool/dataprivacy/summary.php">Resumen de retención de datos</a></div><a href="http://www.icesi.edu.co/blogs/elearning/archivos/331?version=2018120301.03&amp;lang=es&amp;iosappid=1322120564&amp;androidappid=co.edu.icesi.moodle181">Descargar la app para dispositivos móviles</a>                </div>
+                
+                 
+            
+            </div><!--//container-->
+        </div><!--//footer-content-->
+        <div class="bottom-bar text-center">
+            <div class="container" style="font-size: 13px;">
+                <small class="copyright">&copy; 2019 3rd Wave Media</small><br>Adaptación: <a style="color: #ccc;" href="https://www.linkedin.com/in/cristian-david-vasquez-martinez-11392599/">Cristian D. Vasquez</a><br>Imágenes: <a style="color: #ccc;" href="https://www.behance.net/_paulagarcia">Paula</a> - 
+									<a style="color: #ccc;" href="https://www.behance.net/IsabellaSandoval">Isabella</a> - 
+									<a style="color: #ccc;" href="https://www.behance.net/jaime_burb0681">Jaime</a>            </div><!--//container-->
+        </div><!--//bottom-bar-->   
+        
+    </footer><!--//site-footer--> 
+
+    
+	
+
+
+<script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'https://www.icesi.edu.co/moodle/lib/requirejs.php?file=%2F1553099973%2F',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://www.icesi.edu.co/moodle/lib/javascript.php?file=%2F1553099973%2Flib/jquery/jquery-3.2.1.min.js',
+        jqueryui: 'https://www.icesi.edu.co/moodle/lib/javascript.php?file=%2F1553099973%2Flib/jquery/ui-1.12.1/jquery-ui.min.js',
+        jqueryprivate: 'https://www.icesi.edu.co/moodle/lib/javascript.php?file=%2F1553099973%2Flib/requirejs/jquery-private.js'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="https://www.icesi.edu.co/moodle/lib/javascript.php?rev=1553099973&amp;jsfile=%2Flib%2Frequirejs%2Frequire.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+require(['core/first'], function() {
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://www.icesi.edu.co/moodle/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage("es",{
+ "Play": "Reproducción",
+ "Play Video": "Reproducción Vídeo",
+ "Pause": "Pausa",
+ "Current Time": "Tiempo reproducido",
+ "Duration Time": "Duración total",
+ "Remaining Time": "Tiempo restante",
+ "Stream Type": "Tipo de secuencia",
+ "LIVE": "DIRECTO",
+ "Loaded": "Cargado",
+ "Progress": "Progreso",
+ "Fullscreen": "Pantalla completa",
+ "Non-Fullscreen": "Pantalla no completa",
+ "Mute": "Silenciar",
+ "Unmute": "No silenciado",
+ "Playback Rate": "Velocidad de reproducción",
+ "Subtitles": "Subtítulos",
+ "subtitles off": "Subtítulos desactivados",
+ "Captions": "Subtítulos especiales",
+ "captions off": "Subtítulos especiales desactivados",
+ "Chapters": "Capítulos",
+ "You aborted the media playback": "Ha interrumpido la reproducción del vídeo.",
+ "A network error caused the media download to fail part-way.": "Un error de red ha interrumpido la descarga del vídeo.",
+ "The media could not be loaded, either because the server or network failed or because the format is not supported.": "No se ha podido cargar el vídeo debido a un fallo de red o del servidor o porque el formato es incompatible.",
+ "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "La reproducción de vídeo se ha interrumpido por un problema de corrupción de datos o porque el vídeo precisa funciones que su navegador no ofrece.",
+ "No compatible source was found for this media.": "No se ha encontrado ninguna fuente compatible con este vídeo."
+});
+
+    });
+});;
+
+require(['core/yui'], function(Y) {
+    M.util.init_skiplink(Y);
+});
+;
+
+        require(['jquery'], function($) {
+            $('#loginerrormessage').focus();
+        });
+;
+require(["core/notification"], function(amd) { amd.init(1, []); });;
+require(["core/log"], function(amd) { amd.setConfig({"level":"warn"}); });;
+require(["core/page_global"], function(amd) { amd.init(); });
+});
+//]]>
+</script>
+<script type="text/javascript" src="https://www.icesi.edu.co/moodle/theme/javascript.php?theme=impression&amp;rev=1554735053&amp;type=footer"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","morehelp":"M\u00e1s ayuda","loadinghelp":"Cargando...","confirm":"Confirmar","areyousure":"\u00bfEst\u00e0 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con el mismo nombre ya se ha adjuntado al texto que est\u00e1 editando.","fileexistsdialog_filemanager":"Un archivo con ese nombre ya ha sido adjuntado","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} archivos de alias\/atajos que emplean este archivo como su or\u00edgen","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"block":{"addtodock":"Minimizar en la barra lateral","undockitem":"Desacoplar este \u00edtem","dockblock":"Acoplar bloque {$a}","undockblock":"Desacoplar bloque {$a}","undockall":"Desacoplar todo","hidedockpanel":"Esconder el panel desacoplado","hidepanel":"Esconder panel"},"langconfig":{"thisdirectionvertical":"btt"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {Y.use("moodle-core-dock-loader",function() {M.core.dock.loader.initLoader();
+});
+Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\n    config: [\"Accessible.js\", \"Safe.js\"],\r\n    errorSettings: { message: [\"!\"] },\r\n    skipStartupTypeset: true,\r\n    messageStyle: \"none\"\r\n});\r\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+Y.use("moodle-core-popuphelp",function() {M.core.init_popuphelp();
+});
+ M.util.js_pending('random5cc0f7daab55c2'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random5cc0f7daab55c2'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>
