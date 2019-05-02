@@ -10,7 +10,7 @@ colnames(data2)<-iconv(colnames(data2),to="ASCII//TRANSLIT")
 str(data2)
 data2<-data2[,-which(colnames(data2)=='codigodane')]
 str(data2)
-data2$fecha <- as.Date(data2$fecha,"%d/%m/%Y")
+data2$fecha <- as.Date(data2$fecha,"%m/%d/%Y")
 str(data2)
 table(data2$departamento)
 valle.data<-data2[which(data2$departamento=="VALLE"),]
